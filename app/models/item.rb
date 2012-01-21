@@ -17,4 +17,7 @@ class Item < ActiveRecord::Base
       return @choice
   end
   
+  def self.random
+    Item.find(Random.rand(Item.count)+1) 
+  end
 end

@@ -2,6 +2,7 @@ ThePriceIsRight::Application.routes.draw do
   resources :items
 
   get "pages/home"
+  get "pages/result"
   
   root :to => 'pages#home'
 
