@@ -16,7 +16,6 @@
 <%= form_tag("/pages/result", :method => "get") do %>
   <%= label_tag(:q, "What is your answer:") %>
   <%= text_field_tag(:q) %>
+  <%= hidden_field_tag 'item', @item.id %>
   <%= submit_tag("Submit") %>
 <% end %>
-
-<%= link_to "Next Question", root_path %>
