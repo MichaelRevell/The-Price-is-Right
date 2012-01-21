@@ -1,12 +1,15 @@
 <h1>The Price is right Home</h1>
-<p>This is home, hommie</p>
-
-<p>We got a  <%= @item.title %></p>
-
-<p>How much is this worth?</p>
-
+<p>
+	This is home, hommie
+</p>
+<p>
+	We got a  <%= @item.title %>
+</p>
+<p>
+	How much is this worth?
+</p>
 <% @num = 0%>
 <%  @item.choice.each do |c|  %>
-    <% @num += 1 %>
-    <a href="#"><%= c %></a> <% " | " if @num < 5 %>
+<% @num += 1 %>
+<a href="#"><%= c %></a> <% " | " if @num < 5 %>
 <% end %>
