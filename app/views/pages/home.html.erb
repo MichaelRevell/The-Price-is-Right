@@ -5,8 +5,18 @@
 
 <p>How much is this worth?</p>
 
-<% @num = 0%>
+
+<% @num = 0 %>
 <%  @item.choice.each do |c|  %>
     <% @num += 1 %>
-    <a href="#"><%= c %></a> <% " | " if @num < 5 %>
+    <a href="#"><%= c %></a> <%= " | " if @num < @item.choice.size %>
 <% end %>
+
+
+<%= form_tag("/pages/result", :method => "get") do %>
+  <%= label_tag(:q, "What is your answer:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+<%= link_to "Next Question", root_path %>
