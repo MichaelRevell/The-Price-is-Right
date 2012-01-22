@@ -3,6 +3,10 @@
 	width:200px;
 	position:relative;
 }
+
+audio {
+	display:none;
+}
 .score {
 	
 }

@@ -24,4 +24,17 @@ $(document).ready( function() {
 		//$(this).find('.right').animate({ left : 0 },{queue:false,duration:300});
 		//... close it and that's it
 	});
+	if ($('.winorlose:contains("lose")').length > 0) {
+		var num = Math.floor(Math.random()*4)
+		jQuery('audio:eq(0)').attr('src', 'assets/crowdsad'+num+'.mp3');
+		$('audio').get(0).play();
+
+	}
+	if ($('.winorlose:contains("win")').length > 0) {
+		var num = Math.floor(Math.random()*4)
+		jQuery('audio:eq(0)').attr('src', 'assets/crowdapplause' +num+'.mp3');
+		$('audio').get(0).play();
+
+		//$('audio').get(1).attr('src','assets/crowdapplause.mp3').play();
+	}
 });

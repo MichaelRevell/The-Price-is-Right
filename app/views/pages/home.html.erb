@@ -1,5 +1,4 @@
-<h1>The Price is right Home</h1>
-<p>
+<p class="winorlose">
 	<%= flash[:notice] %>
 </p>
 <p>
@@ -9,17 +8,10 @@
 	We got a  <%= @item.title %>
 </p>
 <p>
-	<%= image_tag @item.picture %>
+	<%= image_tag(@item.picture, :size=>"300x300",:class=>"itempic") %>
 </p>
 <p>
 	Description: <%= @item.description %>
-</p>
-<h1>The Price is Down Right Saucy!</h1>
-<p>
-	Score: <%= score %>
-</p>
-<p>
-	We got a  <%= @item.title %>
 </p>
 <p>
 	How much is this worth?
@@ -27,10 +19,10 @@
 <% @num = 0 %>
 <%  @item.choice.each do |c|  %>
 <% @num += 1 %>
-<a href=<%= "/pages/result?utf8=✓&choice=#{c}&item=#{@item.id}" %>><%= c %></a> <%= " | " if @num < @item.choice.size %>
+<a href=<%= "/pages/result?utf8=✓&choice=#{c}&item=#{@item.id}" %> class="test"><%= c %></a> <%= " | " if @num < @item.choice.size %>
 <% end %>
 
-<br>
-<br>
-<br>
+<audio src="assets/crowdapplause.mp3">
+ audio not supported
+</audio>
 
