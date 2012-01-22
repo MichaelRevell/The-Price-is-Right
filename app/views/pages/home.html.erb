@@ -14,7 +14,7 @@
         <% @num = 0 %>
         <%  @item.choice.each do |c|  %>
             <% @num += 1 %>
-            <a href="javascript:closeLogo('<%="/pages/result?utf8=✓&choice=#{c}&item=#{@item.id}" %>');"><span class="card"><%= c %></span></a> <%= " | " if @num < @item.choice.size %>
+            <a href="javascript:closeLogo('<%="/pages/result?utf8=✓&choice=#{c}&item=#{@item.id}" %>');"><span class="card">$<%= c %></span></a> <%= " | " if @num < @item.choice.size %>
         <% end %>
     </div>
 
