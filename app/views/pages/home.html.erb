@@ -1,14 +1,27 @@
-<h1>The Price is right</h1>
-<p>This is home, hommie</p>
-<p>Score: <%= score %></p>
-<p>We got a  <%= @item.title %></p>
-
-<p>How much is this worth?</p>
 
 
+<h1>The Price is Down Right Saucy!</h1>
+
+
+<p>
+	Score: <%= score %>
+</p>
+<p>
+	We got a  <%= @item.title %>
+</p>
+<p>
+	How much is this worth?
+</p>
 <% @num = 0 %>
 <%  @item.choice.each do |c|  %>
-    <% @num += 1 %>
-    <a href=<%="/pages/result?utf8=✓&choice=#{c}&item=#{@item.id}" %>><%= c %></a> <%= " | " if @num < @item.choice.size %>
+<% @num += 1 %>
+<a href=<%= "/pages/result?utf8=✓&choice=#{c}&item=#{@item.id}" %>><%= c %></a> <%= " | " if @num < @item.choice.size %>
 <% end %>
+
+
+<br>
+<br>
+<br>
+
+
 
