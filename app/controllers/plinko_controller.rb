@@ -1,0 +1,2 @@
+class PlinkoController < ApplicationController
+end

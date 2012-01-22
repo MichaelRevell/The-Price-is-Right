@@ -3,7 +3,7 @@ require 'json'
 require 'net/http'
 
 def item_search(query)
-   base_url = "http://open.api.ebay.com/shopping?callname=FindPopularItems&responseencoding=JSON&appid=RogerPcf8-b67b-4ef0-9268-4d164ded513&siteid=0&QueryKeywords=#{URI.encode(query)}&version=745"
+   base_url = "http://open.api.ebay.com/shopping?callname=FindPopularItems&responseencoding=JSON&appid=RogerPcf8-b67b-4ef0-9268-4d164ded513&siteid=0&MaxEntries=99&QueryKeywords=#{URI.encode(query)}&version=745"
    resp = Net::HTTP.get_response(URI.parse(base_url))
    data = resp.body
 
@@ -14,8 +14,7 @@ def item_search(query)
    # if the hash has 'Error' as a key, we raise an error
    if result.has_key? 'Error'
       raise "web service error"
-   end
-   
+   end   
    
    result['ItemArray']['Item'].each do |result|
 		if result['ListingType'].include? 'Fixed'
@@ -31,7 +30,10 @@ def item_search(query)
 			
 			puts item_full['Title']
 			
-			Item.create!(:title => item_full['Title'], :price => Integer(item_full['ConvertedCurrentPrice']['Value']), :description => item_full['PrimaryCategoryName'], :picture => item_full['PictureURL'][0])
+			if (Float(item_full['ConvertedCurrentPrice']['Value']).round > 25)
+			
+				Item.create!(:title => item_full['Title'], :price => Float(item_full['ConvertedCurrentPrice']['Value']).round, :description => item_full['PrimaryCategoryName'], :picture => item_full['PictureURL'][0])
+			end
 		end
    end
 end
