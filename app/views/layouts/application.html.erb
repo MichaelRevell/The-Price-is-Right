@@ -8,14 +8,14 @@
 
 		if (window.location.href.indexOf("win") != -1) {
 			$(document).ready(function () {
-			
+			setTimeout(function () {
 				$('.doorLeft.door1').animate({ left: '-22%' }, 500);
 				$('.doorLeft.door2').animate({ left: '-19%' }, 500);
 				$('.doorRight.door1').animate({ right: '-22%' }, 500);
 				$('.doorRight.door2').animate({ right: '-19%' }, 500, function() {
 					$('.mainArea').css('z-index', '999');
 				});
-			
+			}, 250);
 			});
 		} else {
 			$(document).ready(function () {
@@ -39,16 +39,20 @@
 			});
 		}
 
+	function closeLogo(link) {
+			$('.mainArea').css('z-index', '2');
 
-function closeLogo() {
-					$('.mainArea').css('z-index', '2');
+
+			$('.doorLeft.door1').animate({ left: '0%' }, 500);
+			$('.doorLeft.door2').animate({ left: '25%' }, 500);
+			$('.doorRight.door1').animate({ right: '0%' }, 500);
+			$('.doorRight.door2').animate({ right: '25%' }, 500, function () {
+				window.location.href = link;
+
+			});
 
 
-	$('.doorLeft.door1').animate({ left: '0%' }, 500);
-	$('.doorLeft.door2').animate({ left: '25%' }, 500);
-	$('.doorRight.door1').animate({ right: '0%' }, 500);
-	$('.doorRight.door2').animate({ right: '25%' }, 500);
-}
+		}
 	</script>
 		<%= stylesheet_link_tag    "application" %>
 		<%= stylesheet_link_tag    "application" %>
