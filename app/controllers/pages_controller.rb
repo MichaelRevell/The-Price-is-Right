@@ -30,7 +30,7 @@ class PagesController < ApplicationController
     session[:score] += 10
   end
   
-  def substract_from_score
+  def subtract_from_score
     if session[:score]-10 > 0
       session[:score] -= 10 
     elsif session[:score] > 0
