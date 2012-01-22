@@ -1,8 +1,10 @@
 ThePriceIsRight::Application.routes.draw do
+  resources :checkouts
   resources :items
-
+  
   get "pages/home"
   get "pages/result"
+  get "pages/checkout"
   
   root :to => 'pages#home'
 

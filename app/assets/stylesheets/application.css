@@ -6,6 +6,10 @@
  *= require_tree . 
 */
 
+h1 {
+	color: red;
+}
+
 .bottom-cards {
 	position:fixed;
 	bottom:85px;
