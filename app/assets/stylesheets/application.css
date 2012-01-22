@@ -10,13 +10,18 @@ h1 {
 	color: red;
 }
 
+body {
+	
+	font-size: 40px;
+}
+
 img {
 	max-width: auto;
 	max-height: 350px;
 }
 .bottom-cards {
 	position:fixed;
-	bottom:85px;
+	bottom:95px;
 	text-align: center;
 	width: 80%;
 }
@@ -24,15 +29,21 @@ img {
 .card {
 	width: 50px;
 	height: 50px;
-	background-color: red;
-	border: thick groove yellow;
+	background-color: #3c90E6;
+	border: medium groove black;
 	margin: 5px;
 	padding: 10px;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 20px;
+	font-style: arial-black;
+	text-decoration: none;
 	
 }
 
+a {
+	text-decoration: none;
+}
 .description {
 	height: 560px;
 	overflow: auto;

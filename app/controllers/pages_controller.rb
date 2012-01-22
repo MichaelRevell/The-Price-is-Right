@@ -12,11 +12,11 @@ class PagesController < ApplicationController
     @item.create_choices
     
     if price.to_i == @item.price.to_i
-      @text = "You win"
+      @text = "You were right!"
       @win = 1
       add_to_score
     else
-      @text = "You lose.  price: #{@item.price}"
+      @text = "You lost. :(  The price was $#{@item.price}"
       @win = 0
       subtract_from_score
     end

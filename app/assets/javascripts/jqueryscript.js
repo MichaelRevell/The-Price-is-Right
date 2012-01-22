@@ -24,7 +24,7 @@ $(document).ready( function() {
 		//$(this).find('.right').animate({ left : 0 },{queue:false,duration:300});
 		//... close it and that's it
 	});
-	if ($('.winorlose:contains("lose")').length > 0) {
+	if ($('.winorlose:contains("lost")').length > 0) {
 		var num = 1+Math.floor(Math.random()*3)
 		jQuery('audio:eq(0)').attr('src', 'assets/crowdsad'+num+'.mp3');
 		$('audio').get(0).play();
@@ -33,7 +33,7 @@ $(document).ready( function() {
 		jQuery('audio:eq(1)').attr('src', 'assets/wrong'+num+'.mp3');
 		$('audio').get(1).play();
 	}
-	if ($('.winorlose:contains("win")').length > 0) {
+	if ($('.winorlose:contains("right")').length > 0) {
 		var num = 1+Math.floor(Math.random()*3)
 		jQuery('audio:eq(0)').attr('src', 'assets/crowdapplause' +num+'.mp3');
 		$('audio').get(0).play();
