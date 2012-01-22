@@ -1,0 +1,172 @@
+body
+{
+	background-color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+.border
+{
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	top: 5px;
+	right: 5px;
+	bottom: 5px;
+	left: 5px;
+	position: absolute;
+	border-style: solid;
+	border-width: 15px;
+	overflow: hidden;
+}
+
+.border1
+{
+	border-color: #FF0;
+	background-color: #DDD;
+	border-width: 20px;
+}
+
+.border2
+{
+	border-color: #F0F;
+	background-color: #F0F;
+}
+.border3
+{
+	border-color: #8F6;
+	background-color: #8F6;
+}
+
+.shadow
+{
+	position: absolute;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-shadow: inset 0 4px 12px 2px rgba(0,0,0, 0.5);
+	-moz-box-shadow: inset 0 4px 12px 2px rgba(0,0,0, 0.5);
+	-webkit-box-shadow: inset 0 4px 12px 2px rgba(0,0,0, 0.5);
+}
+
+.doors
+{
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 85;
+}
+
+.door
+{
+	position: absolute;
+	width: 25%;
+	top: 0;
+	bottom: 0;
+	border-right: solid 1px #000;
+	overflow: hidden;
+	background-color: #FFF;
+	z-index: 85;
+}
+
+.panel
+{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('/assets/Writing.png');
+	position: absolute;
+	width: 400%;
+	top: 0;
+	bottom: 0;
+	
+	z-index: 50;
+}
+.panel2
+{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('/assets/Background.png');
+	position: absolute;
+	width: 400%;
+	top: 0;
+	bottom: 0;
+		z-index: 20;
+
+}
+
+.door1
+{
+	z-index: 90;
+}
+
+
+.door2
+{
+	z-index: 87;
+}
+
+.doorLeft
+{
+	border-right: solid 1px #000;
+	box-shadow: 0 0 5px rgba(0,0,0, 0.5);
+	-moz-box-shadow: 0 0 5px rgba(0,0,0, 0.5);
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0, 0.5);
+}
+
+.doorRight
+{
+	border-left: solid 1px #000;
+}
+
+.doorLeft.door1
+{
+	left: 0;
+}
+.doorLeft.door2
+{
+	left: 25%;
+}
+.doorRight.door2
+{
+	right: 25%;
+}
+.doorRight.door1
+{
+	right: 0;
+}
+
+.doorLeft.door1 .panel
+{
+	left: 0;
+}
+.doorLeft.door2 .panel
+{
+	left: -100%;
+}
+.doorRight.door2 .panel
+{
+	right: -100%;
+}
+.doorRight.door1 .panel
+{
+	right: 0;
+}
+
+
+.mainArea
+{
+	position: absolute;
+	left: 6%;
+	right: 6%;
+	top: 0;
+	bottom: 0;
+	z-index: 2;
+	padding: 20px;
+	
+	overflow-y: scroll;
+}
