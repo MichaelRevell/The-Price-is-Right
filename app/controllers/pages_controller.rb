@@ -11,13 +11,15 @@ class PagesController < ApplicationController
     
     if price.to_i == @item.price.to_i
       @text = "You win"
+      @win = 1
       add_to_score
     else
       @text = "You lose.  price: #{@item.price}"
+      @win = 0
       subtract_from_score
     end
     
-    redirect_to root_path, notice: @text
+    redirect_to "/?win=#{@win}", notice: @text
     
   end
   
