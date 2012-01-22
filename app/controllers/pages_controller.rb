@@ -16,7 +16,7 @@ class PagesController < ApplicationController
       @win = 1
       add_to_score
     else
-      @text = "You lost. :(  The price was $#{@item.price}"
+      @text = "Sorry, that was wrong!. :(  The price was $#{@item.price}"
       @win = 0
       subtract_from_score
     end
