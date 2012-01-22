@@ -10,6 +10,10 @@ h1 {
 	color: red;
 }
 
+img {
+	max-width: auto;
+	max-height: 350px;
+}
 .bottom-cards {
 	position:fixed;
 	bottom:85px;

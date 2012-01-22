@@ -4,6 +4,8 @@ class PagesController < ApplicationController
     @item.create_choices
   end
   
+  def test
+  end
   def result
     price = params[:choice]
     @item = Item.find(params[:item]) if Item.find(params[:item])

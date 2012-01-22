@@ -4,6 +4,8 @@ ThePriceIsRight::Application.routes.draw do
   
   get "pages/home"
   get "pages/result"
+  get "pages/checkresult"
+  get "pages/test"
   get "pages/checkout"
   
   root :to => 'pages#home'

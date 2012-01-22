@@ -6,14 +6,24 @@
 
 <% @total=0 %>
 <table><tr>
-<%  @checkouts.checkouts.each do |c|  %>
-<td>
-	<p><%= image_tag c.picture %></p>
-	<p><%= c.title %></p>
-	<div class="field">
-		<p>$<%= number_field c, :price %></p>
-	</div>
-	<% @total += c.price %>
-</td>
+<%= form_tag("/pages/checkresult", :method => "get") do %>
+    <%  @checkouts.checkouts.each do |c|  %>
+    <td>
+    	<p><%= image_tag c.picture %></p>
+    	<p><%= c.title %></p>
+    	<div class="field">
+    		<p>$<%= number_field c, :price %></p>
+    	</div>
+    	<% @total += c.price %>
+    </td>
+    <% end %>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <%= submit_tag("Submit") %>
+        </td>
+    </tr>
+        
 <% end %>
 </tr></table>
