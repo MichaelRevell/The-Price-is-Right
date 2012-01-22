@@ -1,0 +1,19 @@
+<h1>Welcome to the Check-out Game</h1>
+<p><%= flash[:notice] %> </p>
+
+<p>Enter the amounts for each item, then hit submit.</p>
+<p>Your cumulative total must be within 5% of the total amount.</p>
+
+<% @total=0 %>
+<table><tr>
+<%  @checkouts.checkouts.each do |c|  %>
+<td>
+	<p><%= image_tag c.picture %></p>
+	<p><%= c.name %></p>
+	<div class="field">
+		<p>$<%= number_field c, :price %></p>
+	</div>
+	<% @total += c.price %>
+</td>
+<% end %>
+</tr></table>

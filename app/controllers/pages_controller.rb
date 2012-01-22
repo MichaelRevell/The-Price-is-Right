@@ -21,6 +21,25 @@ class PagesController < ApplicationController
     
   end
   
+  def checkout
+    @checkouts = Checkout.new
+    @checkouts.my_choices
+  end
+  
+  def checkresult
+    price = params[:choice]
+    @item = Item.find(params[:item]) if Item.find(params[:item])
+    @item.create_choices
+    
+    if price.to_i == @item.price.to_i
+      @text = "You win"
+    else
+      @text = "You lose.  price: #{@item.price}"
+    end
+    
+    redirect_to @checkout, notice: @text
+    
+  end
   
   # THE FOLLOWING SHOULD NOT BE HERE
   # PLEASE REFACTOR THIS AT SOME POINT
