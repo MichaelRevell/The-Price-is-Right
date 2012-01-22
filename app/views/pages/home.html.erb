@@ -1,12 +1,16 @@
 <center>
     <div class="description">
+		<div class="lastgame">
         <p class="winorlose"><%= flash[:notice] %> </p>
+		</div>
+		<div class="currentgame">
         <p>Score: <font style="font-size: larger; color: red;"><%= score %></font></p>
-        <p>We got a  <b><%= @item.title %></b></p>
-        <p> <%= image_tag @item.picture %></p>
+        <p >We got a  <b><%= @item.title %></b></p>
+        <p style="height: 350px"> <%= image_tag(@item.picture,:class=>"itempic") %></p>
         <p>Description: <%= @item.description %></p>
 
         <p>How much is this worth?</p>
+		</div>
     </div>
 
     <div class="bottom-cards">

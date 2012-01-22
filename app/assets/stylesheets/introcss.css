@@ -11,6 +11,13 @@ audio {
 	
 }
 
+.currentgame {
+	display:none;
+}
+.bottom-cards{
+	display:none;
+}
+
 .box_container {
 	position:relative;
 	/* important */
