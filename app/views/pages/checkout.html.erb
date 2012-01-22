@@ -9,7 +9,7 @@
 <%  @checkouts.checkouts.each do |c|  %>
 <td>
 	<p><%= image_tag c.picture %></p>
-	<p><%= c.name %></p>
+	<p><%= c.title %></p>
 	<div class="field">
 		<p>$<%= number_field c, :price %></p>
 	</div>
