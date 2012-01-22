@@ -18,6 +18,9 @@ audio {
 	display:none;
 }
 
+.lastgame {
+	font-weight: bold;
+}
 .box_container {
 	position:relative;
 	/* important */
