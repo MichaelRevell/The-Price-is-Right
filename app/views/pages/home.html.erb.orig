@@ -5,8 +5,13 @@
 		</div>
 		<div class="currentgame">
         <p>Score: <font style="font-size: larger; color: red;"><%= score %></font></p>
-        <p ><b><%= @item.title %></b></p>
+<<<<<<< HEAD
+        <p><b><%= @item.title %></b></p>
+        <p> <%= image_tag @item.picture %></p>
+=======
+        <p >We got a  <b><%= @item.title %></b></p>
         <p style="height: 350px"> <%= image_tag(@item.picture,:class=>"itempic") %></p>
+>>>>>>> 865b954f4b94ff5b15e2978bf5aa0f0bdf2c6f9b
         <p>Description: <%= @item.description %></p>
 
         <p>How much is this worth?</p>
