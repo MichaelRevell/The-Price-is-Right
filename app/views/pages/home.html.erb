@@ -9,13 +9,6 @@
 <% @num = 0 %>
 <%  @item.choice.each do |c|  %>
     <% @num += 1 %>
-    <a href="#"><%= c %></a> <%= " | " if @num < @item.choice.size %>
+    <a href=<%="/pages/result?utf8=✓&choice=#{c}&item=#{@item.id}" %>><%= c %></a> <%= " | " if @num < @item.choice.size %>
 <% end %>
 
-
-<%= form_tag("/pages/result", :method => "get") do %>
-  <%= label_tag(:q, "What is your answer:") %>
-  <%= text_field_tag(:q) %>
-  <%= hidden_field_tag 'item', @item.id %>
-  <%= submit_tag("Submit") %>
-<% end %>

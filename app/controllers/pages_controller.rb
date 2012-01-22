@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
   
   def result
-    price = params[:q]
+    price = params[:choice]
     @item = Item.find(params[:item]) if Item.find(params[:item])
     @item.create_choices
     
