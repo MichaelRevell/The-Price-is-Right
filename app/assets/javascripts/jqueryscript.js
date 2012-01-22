@@ -29,12 +29,18 @@ $(document).ready( function() {
 		jQuery('audio:eq(0)').attr('src', 'assets/crowdsad'+num+'.mp3');
 		$('audio').get(0).play();
 
+		var num = Math.floor(Math.random()*4)
+		jQuery('audio:eq(1)').attr('src', 'assets/wrong'+num+'.mp3');
+		$('audio').get(1).play();
 	}
 	if ($('.winorlose:contains("win")').length > 0) {
 		var num = Math.floor(Math.random()*4)
 		jQuery('audio:eq(0)').attr('src', 'assets/crowdapplause' +num+'.mp3');
 		$('audio').get(0).play();
 
+		var num = Math.floor(Math.random()*3)
+		jQuery('audio:eq(1)').attr('src', 'assets/correct'+num+'.mp3');
+		$('audio').get(1).play();
 		//$('audio').get(1).attr('src','assets/crowdapplause.mp3').play();
 	}
 });
