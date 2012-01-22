@@ -46,6 +46,6 @@ class Item < ActiveRecord::Base
   end
   
   def self.random
-    Item.find(Random.rand(Item.count)+1) 
+    Item.find(Random.rand(Item.count)+1)  #Item.find(:first, :order => 'RAND()')
   end
 end

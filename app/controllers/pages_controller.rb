@@ -17,6 +17,8 @@ class PagesController < ApplicationController
       subtract_from_score
     end
     
+    redirect_to root_path, notice: @text
+    
   end
   
   
