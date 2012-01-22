@@ -52,12 +52,12 @@ class PagesController < ApplicationController
   private 
   
   def add_to_score
-    session[:score] += 10
+    session[:score] += (Random.rand(3)+1)*10
   end
   
   def subtract_from_score
-    if session[:score]-10 > 0
-      session[:score] -= 10 
+    if session[:score]-5 > 0
+      session[:score] -= 5 
     elsif session[:score] > 0
       session[:score] = 0
     else 
