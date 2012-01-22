@@ -5,11 +5,11 @@ class Checkout < ActiveRecord::Base
   
   def my_choices
     @checkouts = Array.new
-    b = (1..(Checkout.count)).sort_by{rand}
+    b = (1..(Item.count)).sort_by{rand}
     
-    @checkouts << Checkout.find(b[1])
-    @checkouts << Checkout.find(b[2])
-    @checkouts << Checkout.find(b[3])
+    @checkouts << Item.find(b[1])
+    @checkouts << Item.find(b[2])
+    @checkouts << Item.find(b[3])
   end
   
   def checkouts
