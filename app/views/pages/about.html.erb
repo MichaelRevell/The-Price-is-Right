@@ -1,0 +1,33 @@
+<center>
+    <div style="text-align: left; width: 400px;">
+        <h1>About</h1>
+    
+        <br><br>
+
+        <h2>What is the The Price is Downright Saucy?</h2>
+
+        <p>An Awesome Web App</p>
+
+        <h2>What was it Developed in?</h2>
+
+        <p>Rails!</p>
+
+        <h2>Who Developed it?</h2>
+        <p>
+            <% @developers.each do |d| %>
+            <%= d %><br>
+            <% end %>
+        </p>
+        
+
+        <h2>Who the hell is Richard?</h2>
+
+    <p>*shrug. Some Australian guy</p>
+    
+    <h2>Take me back to the fun!</h2>
+    
+    <%= link_to "Click Here", root_path %>
+    
+    </div>
+
+</center>

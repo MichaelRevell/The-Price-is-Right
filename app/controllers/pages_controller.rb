@@ -44,7 +44,16 @@ class PagesController < ApplicationController
     redirect_to @checkout, notice: @text
     
   end
-  
+  def about
+    @developers = Array.new
+    @developers << "Michael Revell"
+    @developers << "Roger Pincombe"
+    @developers << "Daniel Gavia"
+    @developers << "Vidhur Vohra"
+    @developers << "Richard"
+    @developers = @developers.sort_by { rand }
+    
+  end
   # THE FOLLOWING SHOULD NOT BE HERE
   # PLEASE REFACTOR THIS AT SOME POINT
   # PLEASE, PLEASE, PLEASE
